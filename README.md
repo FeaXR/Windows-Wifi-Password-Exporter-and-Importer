@@ -10,3 +10,9 @@ powershell -ExecutionPolicy ByPass -File .\wifi_export.ps1
 ```
 powershell -ExecutionPolicy ByPass -File .\wifi_import.ps1
 ```
+
+To be able to run the scripts by just their names, you need to set yu execution policy accordingly.
+```
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
+This command sets the execution policy for the current user to "RemoteSigned", which allows you to run scripts that are signed by a trusted publisher, as well as locally stored unsigned scripts.
