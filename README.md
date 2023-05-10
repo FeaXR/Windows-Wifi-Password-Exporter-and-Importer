@@ -3,7 +3,7 @@ Simple Powershell scripts to export and import saved WiFi passwords.
 
 Sometimes you need an easy way to back up and restore your WiFi passwords.
 
-To run the script from PowerShell or CMD without altering your execution policy, run the commands:
+To run the script from PowerShell or CMD without altering your execution policy, run the commands in the folder that the script files are located:
 ```
 powershell -ExecutionPolicy ByPass -File .\wifi_export.ps1
 ```
