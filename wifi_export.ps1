@@ -1,5 +1,3 @@
-# powershell -ExecutionPolicy ByPass -File .\export.ps1
-
 param(
     [switch]$UseCurrentLocation,    
     [string]$Path = $null
