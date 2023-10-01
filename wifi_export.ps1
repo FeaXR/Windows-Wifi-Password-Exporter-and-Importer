@@ -1,18 +1,15 @@
 param(
-    [switch]$UseCurrentLocation,    
-    [string]$Path = $null
+    [switch]$UseCurrentLocation,
+    [string]$Path
 )
 
 if ($UseCurrentLocation) {
     $XmlDirectory = Get-Location    # If you want to run it at the folder you are currently in
-} else {
+} elseif ([string]::IsNullOrWhiteSpace($Path)) {
     $XmlDirectory = $PSScriptRoot   # If you want to run it at the folder the script is saved in
-}
-
-if ($Path -ne $null) {
+} else {
     $XmlDirectory = $Path  # Use the specified path if provided
 }
-
 
 $CurrentDate = Get-Date -Format "yyyy-MM-dd"
 $FolderName = "$CurrentDate wifi psw"
